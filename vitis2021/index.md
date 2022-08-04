@@ -200,3 +200,34 @@ Vivadoのインストール場所と、使用できるユーザーを設定し�
 なお起動時に「Could not locate Quick Help files. Quick Help will not be available.」という警告が出ることがありますが、実害はありません。
 
 起動が確認できたら終了してOKです。
+
+## デバイス情報の追加
+
+ここまでの作業でVivadoが動くようになりました。
+しかしまだ、FPGA評価ボードを動かすことはできません。
+ボード固有の情報(デバイス情報)がVivadoに入っていないからです。
+
+以下ではDigilent社製のFPGA評価ボード (ARTY-S7-50など) のデバイス情報を追加する方法について説明します。
+まず下記のリンクをクリックして `vivado-board-master.zip` というファイルをダウンロードして下さい。
+
+<https://github.com/Digilent/vivado-boards/archive/master.zip>
+
+ZIP解凍すると`vivado-board-master`というファイルが得られます。
+この中の`new`フォルダ内の`board_files`というフォルダに、Digilent社製ボードのデバイス情報ファイルが入っています。
+
+次に `C:\Xilinx\Vivado\2021.1\data\boards\board_files` のフォルダを開きます。
+ここにデバイス情報ファイルを入れると、Vivadoに読み込まれます。
+
+これら2つのフォルダを開くと以下のようになります。
+
+28  
+![ ](032.png)
+
+以下のようにデバイス情報ファイルを移動して下さい。
+
+29  
+![ ](033.png)
+
+以上の作業でFPGA評価ボードの開発環境が整いました。
+インストール作業は完了です。
+お疲れ様でした。
